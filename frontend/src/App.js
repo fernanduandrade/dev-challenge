@@ -9,7 +9,10 @@ class App extends React.Component {
 
   state = {
     classified: [],
+    ClassifiedCount: []
   }
+
+  
 
   componentDidMount() {
     let data;
@@ -18,7 +21,8 @@ class App extends React.Component {
       .then(response => {
         data = response.data;
         this.setState({
-          classified: data
+          classified: data,
+          ClassifiedCount: data
         });
       })
       .catch(err => console.error(err));
@@ -27,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container"> 
-          <NavBar />
+          <NavBar totalClassified={this.state.ClassifiedCount.length} />
           <div className="container-fluid">
             <div className="row">
               {this.state.classified.map((c) => (
