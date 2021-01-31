@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import './App.css'
+
+import NavBar from './Components/NavBar.js'
 
 class App extends React.Component {
 
@@ -22,18 +25,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div> 
-          <div>
-              {this.state.classified.map((c) => (
-                  
-                  <table key={c.id}>
-                    <h2>{c.title}</h2>
-                    <h3>{c.date}</h3>
-                    <h4>{c.description}</h4>
-                  </table> 
-              ))} 
-          </div> 
+      <div className="main-container">
+        <div className="container"> 
+          <NavBar />
+            <div>
+                {this.state.classified.map((c) => (
+                    
+                    <table key={c.id}>
+                      <h2>{c.title}</h2>
+                      <h3>{c.date}</h3>
+                      <h4>{c.description}</h4>
+                    </table> 
+                ))} 
+            </div> 
+        </div>
       </div>
+      
     );
   }
 }
