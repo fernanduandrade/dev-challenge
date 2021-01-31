@@ -19,7 +19,7 @@ class NavBar extends Component{
 	            <div className="navbar-nav ml-auto">
 
 	              <li className="nav-item li-style">
-			        <a className="nav-link a-style" href="/"><i class="fa fa-plus-square-o" aria-hidden="true"></i> Novo Classificado</a>
+			        <a className="nav-link a-style" href="/create"><i className="fa fa-plus-square-o" aria-hidden="true"></i> Novo Classificado</a>
 			      </li>
 	            </div>
 	          </div>

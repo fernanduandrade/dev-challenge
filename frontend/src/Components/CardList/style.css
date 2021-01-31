@@ -1,6 +1,6 @@
 .card {
 	margin: 5px;
-	background-color: #343779;
+	background-color: #343779 !important;
 	box-shadow: 0px 1px 1px 1px gray;
 }
 

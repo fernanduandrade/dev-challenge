@@ -35,12 +35,12 @@ class App extends React.Component {
 
               {this.state.classified.sort(
               (a, b) => (b.id) - (a.id)
-                ).map((activity, i) => (
+                ).map((c, i) => (
                 <CardList 
                   key={i}
-                  title={activity.title} 
-                  date={activity.date}
-                  description={activity.description}
+                  title={c.title} 
+                  date={c.date}
+                  description={c.description}
                 />
               ))} 
             </div>
