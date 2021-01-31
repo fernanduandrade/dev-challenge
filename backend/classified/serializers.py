@@ -5,4 +5,4 @@ class ClassifiedSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Classified
-		fields = ('title', 'description', 'date')
+		fields = ('id', 'title', 'description', 'date')
