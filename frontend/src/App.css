@@ -1,9 +1,15 @@
 @import  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
 
-.main-container {
+
+body {
   background-color: #180a29;
 }
 
 .container {
-  background-color: #ffffff !important;
+	padding: 0px;
+	background-color: #ffffff !important;
+}
+
+.container-fluid {
+	padding-bottom: 10px;
 }

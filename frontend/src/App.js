@@ -2,7 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import './App.css'
 
-import NavBar from './Components/NavBar.js'
+import NavBar from './Components/NavBar/NavBar.js'
+import CardList from './Components/CardList/CardList.js'
 
 class App extends React.Component {
 
@@ -25,22 +26,21 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="main-container">
-        <div className="container"> 
+      <div className="container"> 
           <NavBar />
-            <div>
-                {this.state.classified.map((c) => (
-                    
-                    <table key={c.id}>
-                      <h2>{c.title}</h2>
-                      <h3>{c.date}</h3>
-                      <h4>{c.description}</h4>
-                    </table> 
-                ))} 
-            </div> 
-        </div>
+          <div className="container-fluid">
+            <div className="row">
+              {this.state.classified.map((c) => (
+                <CardList 
+                  key={c.id}
+                  title={c.title} 
+                  date={c.date} 
+                  description={c.description}
+                />
+              ))} 
+            </div>
+          </div>
       </div>
-      
     );
   }
 }
