@@ -1,5 +1,26 @@
 .card {
 	margin: 5px;
-	background-color: #e3e3;
+	background-color: #343779;
 	box-shadow: 0px 1px 1px 1px gray;
 }
+
+.card:hover {
+	transform: scale(1.1);
+}
+
+.title-style{
+	color: #ffffff;
+	font-size: 22px;
+}
+
+.date-style {
+	color: #ffffff;
+	font-size: 8px;
+}
+
+.description-style {
+	color: #ffffff;
+	font-size: 16px;
+}
+
+

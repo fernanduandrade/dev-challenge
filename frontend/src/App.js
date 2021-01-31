@@ -12,8 +12,6 @@ class App extends React.Component {
     ClassifiedCount: []
   }
 
-  
-
   componentDidMount() {
     let data;
 
@@ -34,12 +32,15 @@ class App extends React.Component {
           <NavBar totalClassified={this.state.ClassifiedCount.length} />
           <div className="container-fluid">
             <div className="row">
-              {this.state.classified.map((c) => (
+
+              {this.state.classified.sort(
+              (a, b) => (b.id) - (a.id)
+                ).map((activity, i) => (
                 <CardList 
-                  key={c.id}
-                  title={c.title} 
-                  date={c.date} 
-                  description={c.description}
+                  key={i}
+                  title={activity.title} 
+                  date={activity.date}
+                  description={activity.description}
                 />
               ))} 
             </div>
